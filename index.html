@@ -8,35 +8,46 @@
     <title>vendorsheets.</title>
   </head>
   <body>
-    <div class="flex flex-column db-ns avenir">
-      <div class="pa4 fl-ns w-50-ns" style="flex: 1">
-        <div class="f5 ttu lh-title mb5 b">vendorsheets.</div>
-        <div class="pa5">
+    <div class="flex avenir">
+      <div class="pa4" style="flex: 1">
+        <div class="f5 ttu lh-title mb3 b">vendorsheets.</div>
+        <div class="pa4">
           <div class="f2 lh-title">Hundreds of retailers.</div>
           <div class="f2 lh-title mb3 b">One form.</div>
           <div class="f4 lh-copy mb4">Enter your information once. We'll format it for Whole Foods, Star Market and more. No spreadsheets required.</div>
-          <form action="https://formspree.io/form@vendorsheets.com" method="POST">
+          <form class="mw6 "action="https://formspree.io/form@vendorsheets.com" method="POST">
             <div>
               <input
-                placeholder="Email Address" type="email" name="email"
-                class="f6 input-reset ba b--black-20 pv2 ph2 mb1 w-60 avenir"
-                style="background: url(email.svg) no-repeat; text-indent: 25px; background-position: 5px 5px; background-size: 20px;"
+                placeholder="First Name" type="text" name="first"
+                class="f6 input-reset ba pv2 ph2 mb1 w-50 avenir mb2"
+                style="background: url(avatar.svg) no-repeat; text-indent: 25px; background-position: 4px 3px; background-size: 23px;"
               >
-            </div>
-            <div class="mb2">
               <input
-                placeholder="UPC" type="text" name="_subject"
-                class="f6 input-reset ba b--black-20 pv2 ph2 mb1 w-60 avenir"
-                style="background: url(barcode.svg) no-repeat; text-indent: 25px; background-size: 30px;"
+                placeholder="Last Name" type="text" name="last"
+                class="f6 input-reset ba pv2 ph2 mb1 w-50 avenir mb2"
+                style="background: url(avatar.svg) no-repeat; text-indent: 25px; background-position: 4px 3px; background-size: 23px; margin-left: -5px;"
               >
             </div>
-            <div>
-              <input type="submit" class="input-reset bg-black-80 white f6 pv2 ph3 ba b--black-80 bg-hover-mid-gray w-60 avenir" value="Notify Me">
-            </div>
+            <input
+              placeholder="Email Address" type="email" name="email"
+              class="f6 input-reset ba pv2 ph2 mb1 w-100 avenir mb2"
+              style="background: url(email.svg) no-repeat; text-indent: 25px; background-position: 5px 5px; background-size: 20px;"
+            >
+            <input
+              placeholder="Brand" type="text" name="brand"
+              class="f6 input-reset ba pv2 ph2 mb1 w-100 avenir mb2"
+              style="background: url(briefcase.svg) no-repeat; text-indent: 25px; background-position: 5px 5px; background-size: 20px;"
+            >
+            <input
+              placeholder="UPC" type="text" name="_subject"
+              class="f6 input-reset ba pv2 ph2 mb1 w-100 avenir mb3"
+              style="background: url(barcode.svg) no-repeat; text-indent: 25px; background-size: 30px;"
+            >
+            <input type="submit" class="input-reset bg-green white f6 pv2 ph3 ba b--green bg-hover-mid-gray w-100 avenir" value="Notify Me">
           </form>
         </div>
       </div>
-      <div class="vh-100 cover fl-ns w-50-ns" style="flex: 1; background-image: url(https://images.unsplash.com/photo-1464374288807-174911d4adb9?dpr=2&auto=format&fit=crop&w=767&h=1142&q=80&cs=tinysrgb&crop=);">
+      <div class="vh-100 cover dn db-ns" style="flex: 1; background-image: url(https://images.unsplash.com/photo-1464374288807-174911d4adb9?dpr=2&auto=format&fit=crop&w=767&h=1142&q=80&cs=tinysrgb&crop=);">
     </div>
   </body>
 </html>
