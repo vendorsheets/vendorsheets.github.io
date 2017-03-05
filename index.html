@@ -1,1 +1,42 @@
-Hello, vendors!
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700">
+    <title>Vendorsheets</title>
+  </head>
+  <body>
+    <div class="flex flex-column db-ns avenir">
+      <div class="pa4 fl-ns w-50-ns" style="flex: 1">
+        <div class="f5 ttu lh-title mb5 b">vendorsheets.</div>
+        <div class="pa5">
+          <div class="f2 lh-title">Hundreds of retailers.</div>
+          <div class="f2 lh-title mb3 b">One form.</div>
+          <div class="f4 lh-copy mb4">Enter your information once. We'll format it for Whole Foods, Star Market and more. No spreadsheets required.</div>
+          <form action="https://formspree.io/form@vendorsheets.com" method="POST">
+            <div>
+              <input
+                placeholder="Email Address" type="email" name="email" id="email"
+                class="f6 input-reset ba b--black-20 pv2 ph2 mb1 w-60 avenir"
+                style="background: url(email.svg) no-repeat; text-indent: 25px; background-position: 5px 5px; background-size: 20px;"
+              >
+            </div>
+            <div class="mb2">
+              <input
+                placeholder="UPC" type="text" name="upc" id="upc"
+                class="f6 input-reset ba b--black-20 pv2 ph2 mb1 w-60 avenir"
+                style="background: url(barcode.svg) no-repeat; text-indent: 25px; background-size: 30px;"
+              >
+            </div>
+            <div>
+              <input type="submit" class="input-reset bg-black-80 white f6 pv2 ph3 ba b--black-80 bg-hover-mid-gray w-60 avenir">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="vh-100 cover fl-ns w-50-ns" style="flex: 1; background-image: url(https://images.unsplash.com/photo-1464374288807-174911d4adb9?dpr=2&auto=format&fit=crop&w=767&h=1142&q=80&cs=tinysrgb&crop=);">
+    </div>
+  </body>
+</html>
