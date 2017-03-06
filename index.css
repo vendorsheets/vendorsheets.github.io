@@ -1,0 +1,54 @@
+body {
+  font-family: 'avenir', sans-serif;
+}
+
+textarea, input, button, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.signup-form input {
+  text-indent: 25px;
+}
+
+.name-input {
+  background: url(avatar.svg) no-repeat;
+  background-position: 4px 3px;
+  background-size: 23px;
+}
+
+.first-name-input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.last-name-input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  margin-left: -5px
+}
+
+.email-input {
+  background: url(email.svg) no-repeat;
+  background-position: 5px 5px;
+  background-size: 20px;
+}
+
+.brand-input {
+  background: url(briefcase.svg) no-repeat;
+  background-position: 5px 5px;
+  background-size: 20px;
+}
+
+.upc-input {
+  background: url(barcode.svg) no-repeat;
+  background-size: 30px;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.stock-bg {
+  background-image: url(apples.png);
+}
