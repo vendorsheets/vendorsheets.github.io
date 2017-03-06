@@ -13,7 +13,7 @@ textarea, input, button, select {
 }
 
 .name-input {
-  background: url(avatar.svg) no-repeat;
+  background: url(images/avatar.svg) no-repeat;
   background-position: .1rem .2rem;
   background-size: 1.8rem;
 }
@@ -31,19 +31,19 @@ textarea, input, button, select {
 }
 
 .email-input {
-  background: url(email.svg) no-repeat;
+  background: url(images/email.svg) no-repeat;
   background-position: .3rem .4rem;
   background-size: 1.4rem;
 }
 
 .brand-input {
-  background: url(briefcase.svg) no-repeat;
+  background: url(images/briefcase.svg) no-repeat;
   background-position: .3rem .3rem;
   background-size: 1.45rem;
 }
 
 .upc-input {
-  background: url(barcode.svg) no-repeat;
+  background: url(images/barcode.svg) no-repeat;
   background-position: .05rem .05rem;
   background-size: 2rem;
 }
@@ -53,5 +53,5 @@ textarea, input, button, select {
 }
 
 .stock-bg {
-  background-image: url(apples.png);
+  background-image: url(images/apples.png);
 }
