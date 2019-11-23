@@ -22,7 +22,7 @@ export default () => (
           <div className="f2 lh-title mb3 fw9">Blog</div>
           {
             [1, 2, 3].map((value, index) => (
-              <div className={index === 0 ? "" : "pt3"}>
+              <div key={index} className={index === 0 ? "" : "pt3"}>
                 <ArticleCard />
               </div>
             ))
