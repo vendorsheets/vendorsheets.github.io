@@ -1,11 +1,17 @@
 # vendorsheets.github.io
 vendorsheets website
 
-## Develop
+## Install
 ```
 npm install
+```
+
+## Run locally
+```
 gastby develop
 ```
 
 ## Deploy
-TODO
+```
+npm run deploy
+```
