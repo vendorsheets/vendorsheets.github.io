@@ -21,7 +21,7 @@ export default ({ data }) => (
       {
         data.allMarkdownRemark.edges.map(({ node }, index) => (
           <div key={node.id} className={index === 0 ? "" : "pt3"}>
-            <Link className="black link" to={node.fields.slug}>
+            <Link className="link dim" to={node.fields.slug}>
               <ArticleCard
                 title={node.frontmatter.title}
                 excerpt={node.excerpt}

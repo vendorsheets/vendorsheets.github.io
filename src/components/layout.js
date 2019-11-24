@@ -18,9 +18,9 @@ export default ({ backgroundColor="white", children }) => (
         ga('send', 'pageview');
       `}</script>
     </Helmet>
-    <div className={`bg-${backgroundColor} h-100 overflow-auto`}>
+    <div className={`bg-${backgroundColor} h-100 overflow-auto near-black`}>
       <div className="pa4">
-        <div className="f5 lh-title mb3 fw9"><Link to="/" className="black link">vendorsheets.</Link></div>
+        <Link to="/" className="link dim f5 lh-title mb3 fw9 db">vendorsheets.</Link>
         {children}
       </div>
     </div>

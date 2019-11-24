@@ -6,7 +6,7 @@ import johnny from "../images/johnny.jpg"
 export default ({ data }) => {
   const post = data.markdownRemark
   return (
-    <Layout backgroundColor="washed-yellow">
+    <Layout backgroundColor="washed-blue">
       <div className="pt2 mw0 mw7-ns center">
         <Link to="/blog" className="link dim f4 b mb4 db">{"< Blog"}</Link>
         <div className="flex items-center">
