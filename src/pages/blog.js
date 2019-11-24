@@ -9,7 +9,7 @@ const ArticleCard = ({ title, excerpt, author, date }) => (
       {excerpt}
     </p>
     <p className="f6 ma0">
-      {`${author} on ${date}`}
+      {date}
     </p>
   </section>
 );
