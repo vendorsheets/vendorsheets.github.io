@@ -7,7 +7,7 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout backgroundColor="light-gray">
-      <div className="pt2 mw5 mw7-ns center">
+      <div className="pt2 mw0 mw7-ns center">
         <div className="f4 black b pb4">
           <Link to="/blog" className="link black bb bw2">{"< Blog"}</Link>
         </div>
