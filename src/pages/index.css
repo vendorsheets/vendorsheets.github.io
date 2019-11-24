@@ -17,6 +17,10 @@ textarea, input, button, select {
   line-height: normal;
 }
 
+a {
+  color: inherit;
+}
+
 .signup-form input[type="email"], .signup-form input[type="text"] {
   text-indent: 1.7rem;
 }
