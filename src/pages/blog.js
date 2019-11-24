@@ -1,34 +1,58 @@
 import React from "react"
 import Layout from "../components/layout"
+import { Link, graphql } from "gatsby"
 
-const ArticleCard = () => (
-  <section className="pa4 br3 bg-near-white">
-    <h2 className="mt0">Article title</h2>
+const ArticleCard = ({ title, excerpt, author, date }) => (
+  <section className="pa4 br3 ba bw2 bg-white">
+    <h2 className="mt0">{title}</h2>
     <p className="f5 lh-copy">
-      This is a description of the article
+      {excerpt}
     </p>
     <p className="f6 ma0">
-      Johnny Fayad on November 23, 2019
+      {`${author} on ${date}`}
     </p>
   </section>
-)
+);
 
-export default () => (
-  <Layout>
-    <div className="flex">
-      <div className="pa4 flex-1">
-        <div className="f5 lh-title mb3 fw9">vendorsheets.</div>
-        <div className="mw5 mw7-ns center">
-          <div className="f2 lh-title mb3 fw9">Blog</div>
-          {
-            [1, 2, 3].map((value, index) => (
-              <div key={index} className={index === 0 ? "" : "pt3"}>
-                <ArticleCard />
-              </div>
-            ))
-          }
-        </div>
-      </div>
+export default ({ data }) => (
+  <Layout backgroundColor="light-red">
+    <div className="mw5 mw7-ns center">
+      <div className="f2 lh-title mb3 fw9">Blog</div>
+      {
+        data.allMarkdownRemark.edges.map(({ node }, index) => (
+          <div key={node.id} className={index === 0 ? "" : "pt3"}>
+            <Link className="black link" to={node.fields.slug}>
+              <ArticleCard
+                title={node.frontmatter.title}
+                excerpt={node.excerpt}
+                author={node.frontmatter.author}
+                date={node.frontmatter.date}
+              />
+            </Link>
+          </div>
+        ))
+      }
     </div>
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            author
+            date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+            slug
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`;
