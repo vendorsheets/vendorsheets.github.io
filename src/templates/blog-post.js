@@ -7,17 +7,17 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout backgroundColor="light-gray">
-      <div className="mw5 mw7-ns center">
+      <div className="pt2 mw5 mw7-ns center">
         <div className="f4 black b pb4">
           <Link to="/blog" className="link black bb bw2">{"< Blog"}</Link>
         </div>
         <div className="flex items-center">
           <div className="flex pr3 items-center">
-            <img className="br-100 h3" src={johnny} />
+            <img className="br-100 ba bw2 h3" src={johnny} />
           </div>
           <div>
             <div className="f5 b pb2">{post.frontmatter.author}</div>
-            <div className="f6">{`2 min read - ${post.frontmatter.date}`}</div>
+            <div className="f6">{`${post.timeToRead} min read • ${post.frontmatter.date}`}</div>
           </div>
         </div>
         <h1 className="title f1">{post.frontmatter.title}</h1>
@@ -36,6 +36,7 @@ export const query = graphql`
         author
         date(formatString: "DD MMMM, YYYY")
       }
+      timeToRead
     }
   }
 `

@@ -18,7 +18,7 @@ export default ({ backgroundColor="white", children }) => (
         ga('send', 'pageview');
       `}</script>
     </Helmet>
-    <div className={`flex vh-100 bg-${backgroundColor}`}>
+    <div className={`flex bg-${backgroundColor}`}>
       <div className="pa4 w-100">
         <div className="f5 lh-title mb3 fw9"><Link to="/" className="black link dim">vendorsheets.</Link></div>
         {children}
