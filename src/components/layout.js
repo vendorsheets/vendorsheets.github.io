@@ -1,9 +1,9 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 
 export default ({ backgroundColor="white", children }) => (
-  <div>
+  <Fragment>
     <Helmet>
       <meta charSet="utf-8" />
       <title>vendorsheets.</title>
@@ -18,11 +18,11 @@ export default ({ backgroundColor="white", children }) => (
         ga('send', 'pageview');
       `}</script>
     </Helmet>
-    <div className={`bg-${backgroundColor}`}>
+    <div className={`bg-${backgroundColor} h-100`}>
       <div className="pa4">
         <div className="f5 lh-title mb3 fw9"><Link to="/" className="black link">vendorsheets.</Link></div>
         {children}
       </div>
     </div>
-  </div>
+  </Fragment>
 )

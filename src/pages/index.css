@@ -1,5 +1,14 @@
+html, body, #___gatsby {
+  height: 100%;
+}
+
 body {
+  margin: 0px;
   font-family: 'Muli', sans-serif;
+}
+
+div[role="group"][tabindex] {
+  height: 100%;
 }
 
 textarea, input, button, select {
