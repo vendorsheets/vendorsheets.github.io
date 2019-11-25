@@ -2,6 +2,8 @@ import React, { Fragment } from "react"
 import { Helmet } from "react-helmet"
 import { Link } from "gatsby"
 
+import "../css/tachyons.min.css"
+
 export default ({ backgroundColor="white", children }) => (
   <Fragment>
     <Helmet>

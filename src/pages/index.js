@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 
 import "./index.css"
-import "../css/tachyons.min.css"
 
 export default () => (
   <div className="flex">
