@@ -16,7 +16,7 @@ const ArticleCard = ({ title, excerpt, author, date }) => (
 
 export default ({ data }) => (
   <Layout backgroundColor="light-red">
-    <div className="mw5 mw7-ns center">
+    <div className="mw7-ns center">
       <div className="f2 lh-title mb3 fw9">Blog</div>
       {
         data.allMarkdownRemark.edges.map(({ node }, index) => (
