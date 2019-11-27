@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 import "../css/tachyons.min.css"
 
-export default ({ backgroundColor="white", children }) => (
+export default ({ backgroundColor, children }) => (
   <Fragment>
     <Helmet>
       <meta charSet="utf-8" />
@@ -20,7 +20,7 @@ export default ({ backgroundColor="white", children }) => (
         ga('send', 'pageview');
       `}</script>
     </Helmet>
-    <div className={`bg-${backgroundColor} h-100 overflow-auto near-black`}>
+    <div className={(backgroundColor ? `bg-${backgroundColor}` : '') + `h-100 overflow-auto near-black`}>
       <div className="pa4">
         <Link to="/" className="link dim f5 lh-title mb3 fw9 db">vendorsheets.</Link>
         {children}

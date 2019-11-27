@@ -4,14 +4,14 @@ import Layout from "../components/layout"
 import "./index.css"
 
 export default () => (
-  <div className="flex">
+  <div className="flex" style={{ backgroundColor: '#FAFAFA' }}>
     <div className="flex-1">
       <Layout>
         <div className="flex" style={{ justifyContent: 'space-around' }}>
-          <div className="pa4-ns flex-1">
+          <div className="pa4-ns pr0-ns flex-1">
             <div>
-              <div className="f2 lh-title">Hundreds of retailers.</div>
-              <div className="f2 lh-title mb3 fw9">One form.</div>
+              <div className="f1 lh-title fw9">Hundreds of retailers.</div>
+              <div className="f1 lh-title mb3 fw9">One form.</div>
               <div className="f4 lh-copy mb4">
                 Enter your information once. We'll format it for Whole Foods, Star Market and more. No spreadsheets required.
               </div>
