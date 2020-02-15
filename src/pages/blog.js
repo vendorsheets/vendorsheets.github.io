@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import { Link, graphql } from "gatsby"
 
-const ArticleCard = ({ title, excerpt, author, date }) => (
+const ArticleCard = ({ title, excerpt, date }) => (
   <section className="pa4 br3 ba bw2 bg-white">
     <h2 className="mt0">{title}</h2>
     <p className="f5 lh-copy">
@@ -25,7 +25,6 @@ export default ({ data }) => (
               <ArticleCard
                 title={node.frontmatter.title}
                 excerpt={node.excerpt}
-                author={node.frontmatter.author}
                 date={node.frontmatter.date}
               />
             </Link>
@@ -44,7 +43,6 @@ export const query = graphql`
           id
           frontmatter {
             title
-            author
             date(formatString: "DD MMMM, YYYY")
           }
           fields {
