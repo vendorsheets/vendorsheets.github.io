@@ -13,7 +13,7 @@ export default () => (
               <div className="f2 lh-title">Hundreds of retailers.</div>
               <div className="f2 lh-title mb3 fw9">One form.</div>
               <div className="f4 lh-copy mb4">
-                Enter your information once. We'll format it for Whole Foods, Star Market and more. No spreadsheets required.
+                Enter your information once. We'll format it for Whole Foods, Kroger, and more. No spreadsheets required.
               </div>
               <form className="mw6 signup-form" action="https://formspree.io/form@vendorsheets.com" method="POST">
                 <input
