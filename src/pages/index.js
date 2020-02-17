@@ -3,6 +3,18 @@ import Layout from "../components/layout"
 
 import "./index.css"
 
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz_0tQJcLW-O0S_lFf-a89QdZsYZcLLpgpst0X3gq9MGL38rw/exec';
+
+const sendToSheet = (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+
+  fetch(scriptURL, { method: 'POST', body: formData })
+    .then(response => console.log('Success!', response))
+    .catch(error => console.error('Error!', error.message));
+};
+
 export default () => (
   <div className="flex">
     <div className="flex-1">
@@ -15,18 +27,18 @@ export default () => (
               <div className="f4 lh-copy mb4">
                 Enter your information once. We'll format it for Whole Foods, Kroger, and more. No spreadsheets required.
               </div>
-              <form className="mw6 signup-form" action="https://formspree.io/form@vendorsheets.com" method="POST">
+              <form className="mw6 signup-form" onSubmit={sendToSheet}>
                 <input
                   className="f6 input-reset ba br1 pv2 ph2 mb1 w-50 mb2 name-input first-name-input"
                   type="text"
                   placeholder="First Name"
-                  name="first"
+                  name="first_name"
                 />
                 <input
                   className="f6 input-reset ba br1 pv2 ph2 mb1 w-50 mb2 name-input last-name-input"
                   type="text"
                   placeholder="Last Name"
-                  name="last"
+                  name="last_name"
                 />
                 <input
                   className="f6 input-reset ba br1 pv2 ph2 mb1 w-100 mb2 email-input"
@@ -44,7 +56,7 @@ export default () => (
                   className="f6 input-reset ba br1 pv2 ph2 mb1 w-100 mb3 upc-input"
                   type="text"
                   placeholder="Top Selling UPC"
-                  name="_subject"
+                  name="upc"
                 />
                 <input
                   className="input-reset bg-green white f6 pv2 ph3 ba br1 b--green w-100 pointer"
