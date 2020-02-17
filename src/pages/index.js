@@ -33,12 +33,12 @@ const failedButton = (
 
 
 const LoadingButton = () => {
-  const FRUITS = ["🍎", "🍌", "🍇"];
+  const FRUITS = ["🍎", "🍌", "🍇", "🍉", "🥭"];
   const [loadingFruitIndex, setLoadingFruitIndex] = useState(0);
 
   useEffect(() => {
     let id = setInterval(
-      () => setLoadingFruitIndex((loadingFruitIndex + 1) % 3),
+      () => setLoadingFruitIndex((loadingFruitIndex + 1) % FRUITS.length),
       400,
     );
 
