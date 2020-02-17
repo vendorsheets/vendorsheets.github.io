@@ -6,22 +6,11 @@ import "./index.css"
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbz_0tQJcLW-O0S_lFf-a89QdZsYZcLLpgpst0X3gq9MGL38rw/exec';
 
-const FRUITS = ["🍎", "🍌", "🍇"];
-
 const submitButton = (
   <input
     className="input-reset bg-green white f6 pv2 ph3 ba br1 b--green w-100 pointer"
     type="submit"
     value="Notify Me"
-  />
-);
-
-const getLoadingButton = (fruit) => (
-  <input
-    className="input-reset bg-green white f6 pv2 ph3 ba br1 b--green w-100"
-    type="submit"
-    value={fruit}
-    disabled={true}
   />
 );
 
@@ -42,8 +31,9 @@ const failedButton = (
   />
 );
 
-export default () => {
-  const [requestState, setRequestState] = useState("INITIAL");
+
+const LoadingButton = () => {
+  const FRUITS = ["🍎", "🍌", "🍇"];
   const [loadingFruitIndex, setLoadingFruitIndex] = useState(0);
 
   useEffect(() => {
@@ -54,6 +44,19 @@ export default () => {
 
     return () => clearInterval(id);
   })
+
+  return (
+    <input
+      className="input-reset bg-green white f6 pv2 ph3 ba br1 b--green w-100"
+      type="submit"
+      value={FRUITS[loadingFruitIndex]}
+      disabled={true}
+    />
+  );
+}
+
+export default () => {
+  const [requestState, setRequestState] = useState("INITIAL");
 
   const sendToSheet = (event) => {
     event.preventDefault();
@@ -72,7 +75,7 @@ export default () => {
   const getSubmitButton = () => {
     switch(requestState) {
       case "LOADING":
-        return getLoadingButton(FRUITS[loadingFruitIndex]);
+        return (<LoadingButton/>);
       case "SUCCESS":
         return successButton;
       case "FAILED":
