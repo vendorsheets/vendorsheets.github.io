@@ -19,7 +19,6 @@ const successButton = (
     className="input-reset bg-blue white f6 pv2 ph3 ba br1 b--blue w-100"
     type="submit"
     value="👍"
-    disabled={true}
   />
 );
 
@@ -50,7 +49,6 @@ const LoadingButton = () => {
       className="input-reset bg-green white f6 pv2 ph3 ba br1 b--green w-100"
       type="submit"
       value={FRUITS[loadingFruitIndex]}
-      disabled={true}
     />
   );
 }
