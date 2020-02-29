@@ -53,7 +53,9 @@ const LoadingButton = () => {
   );
 }
 
-export default () => {
+export default ({ location }) => {
+  const page = location.pathname;
+
   const [requestState, setRequestState] = useState("INITIAL");
 
   const sendToSheet = (event) => {
@@ -82,8 +84,6 @@ export default () => {
         return submitButton;
     }
   }
-
-  const page = window.location.pathname;
 
   return (
     <div className="flex">
