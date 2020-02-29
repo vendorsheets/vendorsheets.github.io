@@ -83,6 +83,8 @@ export default () => {
     }
   }
 
+  const page = window.location.pathname;
+
   return (
     <div className="flex">
       <div className="flex-1">
@@ -125,6 +127,11 @@ export default () => {
                     type="text"
                     placeholder="Top Selling UPC"
                     name="upc"
+                  />
+                  <input
+                    type="hidden"
+                    name="page"
+                    value={page}
                   />
                   { getSubmitButton() }
                 </form>
